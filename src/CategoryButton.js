@@ -1,8 +1,8 @@
 import React from "react";
 
-const CategoryButton = ({onClick, label}) => {
+const CategoryButton = ({onClick, label, className}) => {
   return (
-    <button className="CategoryButton" onClick={onClick}>{label}</button>
+    <button className={className} onClick={onClick}>{label}</button>
   )
 }
 

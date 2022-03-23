@@ -37,6 +37,11 @@ code {
   color: white;
 }
 
+.selected {
+  background-color: rgb(247, 247, 231);
+  color: rgb(1, 53, 3);
+}
+
 .Product {
   background-color: rgb(247, 247, 231);
   border-radius: 8px;

@@ -9,8 +9,10 @@ function App() {
   const [category, setCategory] = useState('All')
 
   const categories = namesAndCategories.map(obj => {
+    const className = obj.name === category ? 'CategoryButton selected' : 'CategoryButton';
+    console.log(className)
     return (
-      <CategoryButton key={obj.name} onClick={()=> setCategory(obj.name)} label={obj.name}/>
+      <CategoryButton className={className} key={obj.name} onClick={()=> setCategory(obj.name)} label={obj.name}/>
     )
   })
 
@@ -25,8 +27,7 @@ function App() {
   return (
     <>
       <div className="CategoryList">
-
-      <CategoryButton key={obj.name} onClick={()=> setCategory(obj.name)} label={obj.name}/>
+        <CategoryButton className='CategoryButton' key='All' onClick={()=> setCategory('All')} label={'All'}/>
         {categories}
       </div>
       <div className="ProductList">
